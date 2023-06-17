@@ -7,14 +7,12 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
-import java.text.NumberFormat;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 
-public class Main {
+public class CadastrarPessoa {
 
 
     private static String getValorOuPadrao(String valor, String padrao) {
@@ -42,7 +40,6 @@ public class Main {
         Pessoa cassiano = new Pessoa("Cassiano","11111111111",dataNascimento, Sexo.MASCULINO, "Estudante",endereco, contato, profissao, habilidades, new BigDecimal(2000), new BigDecimal(7000));
         List<Pessoa> candidatos = new ArrayList<>();
         candidatos.add(cassiano);
-        NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(new Locale("pt", "BR"));
 
 
         Path arquivoDestino = Paths.get("/home/juancassiano/Documentos/cadastro.csv");
